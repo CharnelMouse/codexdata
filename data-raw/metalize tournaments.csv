@@ -1,0 +1,39 @@
+EventID,Date,Tournament?,Medium,Description
+7001,01.01.2016,Casual,TTS,Event for all casual TTS games in 2016
+7002,01.01.2017,Casual,TTS,Event for all casual TTS games in first quadrant of 2017
+7003,01.04.2017,Casual,TTS,Event for all casual TTS games in second quadrant of 2017
+7004,01.07.2017,Casual,TTS,Event for all casual TTS games in third quadrant of 2017
+7005,01.10.2017,Casual,TTS,Event for all casual TTS games in fourth quadrant of 2017
+7006,01.01.2018,Casual,TTS,Event for all casual TTS games in first quadrant of 2018
+7007,01.04.2018,Casual,TTS,Event for all casual TTS games in second quadrant of 2018
+7008,01.07.2018,Casual,TTS,Event for all casual TTS games in third quadrant of 2018
+7009,01.10.2018,Casual,TTS,Event for all casual TTS games in fourth quadrant of 2018
+7010,01.01.2019,Casual,TTS,
+7011,01.04.2019,Casual,TTS,
+7012,01.07.2019,Casual,TTS,
+7013,01.10.2019,Casual,TTS,
+7014,01.01.2020,Casual,TTS,
+7015,01.04.2020,Casual,TTS,
+7016,01.07.2020,Casual,TTS,
+7017,01.10.2020,Casual,TTS,
+7018,01.01.2016,Casual,Offline,Event for all casual Offline games in 2016
+7019,01.01.2017,Casual,Offline,Event for all casual Offline games in first quadrant of 2017
+7020,01.04.2017,Casual,Offline,Event for all casual Offline games in second quadrant of 2017
+7021,01.07.2017,Casual,Offline,Event for all casual Offline games in third quadrant of 2017
+7022,01.10.2017,Casual,Offline,Event for all casual Offline games in fourth quadrant of 2017
+7023,01.01.2018,Casual,Offline,Event for all casual Offline games in first quadrant of 2018
+7024,01.04.2018,Casual,Offline,Event for all casual Offline games in second quadrant of 2018
+7025,01.07.2018,Casual,Offline,Event for all casual Offline games in third quadrant of 2018
+7026,01.10.2018,Casual,Offline,Event for all casual Offline games in fourth quadrant of 2018
+7027,01.01.2019,Casual,Offline,
+7028,01.04.2019,Casual,Offline,
+7029,01.07.2019,Casual,Offline,
+7030,01.10.2019,Casual,Offline,
+7031,01.01.2020,Casual,Offline,
+7032,01.04.2020,Casual,Offline,
+7033,01.07.2020,Casual,Offline,
+7034,01.10.2020,Casual,Offline,
+7100,10.09.2017,Tournament,Offline,"Monocolour-only, first Moscow offline event with floor rules enforcement"
+7101,09.09.2018,Tournament,Offline,Moscow Igrokon qualifier
+7102,23.09.2018,Tournament,Offline,Igrokon Moscow vs. Petersburg showmatches
+7103,09.09.2018,Tournament,Offline,Petersburg Igrokon qualifier

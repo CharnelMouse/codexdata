@@ -1,0 +1,23 @@
+Package: codexdata
+Type: Package
+Title: Data for Codex tournament matches
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Mark",
+           family = "Webster",
+           role = c("aut", "cre"),
+           email = "markwebster204@yahoo.co.uk")
+Maintainer: Mark Webster <markwebster204@yahoo.co.uk>
+Description: Match data for tournament mathces of Codex by Sirlin Games.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 3.5.2.0)
+Suggests: 
+    testthat
+RoxygenNote: 7.0.1
+Imports:
+    data.table (>= 1.12.6),
+    magrittr (>= 1.5),
+    stringr (>= 1.4.0)
