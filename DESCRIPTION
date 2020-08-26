@@ -9,7 +9,7 @@ Authors@R:
            email = "markwebster204@yahoo.co.uk")
 Maintainer: Mark Webster <markwebster204@yahoo.co.uk>
 Description: Match data for tournament mathces of Codex by Sirlin Games.
-License: What license is it under?
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends:

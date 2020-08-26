@@ -2,7 +2,7 @@
 % Please edit documentation in R/convert_deck_names.r
 \name{standardise_deck_name}
 \alias{standardise_deck_name}
-\title{Standardise recorded deck names, change to any common nicknames}
+\title{Standardise recorded deck names, using any given nicknames}
 \usage{
 standardise_deck_name(
   name,
@@ -12,14 +12,16 @@ standardise_deck_name(
 )
 }
 \arguments{
-\item{name}{a character vector, containing deck names or nicknames}
+\item{name}{a character vector, containing deck names or nicknames.}
 
-\item{starters}{a data.table, containing columns for spec names and their associated starter colour}
+\item{starters}{a data.table, containing columns for spec names and their associated starter colour.}
 
 \item{nicknames}{an optional data.table, containing standardised deck names
-and their associated nicknames, so deck nicknames can be accepted as input}
+and their associated nicknames. This is used to convert given nicknames to
+their deck names.}
 
-\item{return_nicknames}{if TRUE, returns a deck's nickname instead of its name if there is one in \code{nicknames}}
+\item{return_nicknames}{if TRUE, returns a deck's nickname instead of its
+name if there is one in \code{nicknames}.}
 }
 \value{
 a character vector of the same length as \code{name}, containing
@@ -27,5 +29,5 @@ a character vector of the same length as \code{name}, containing
   one.
 }
 \description{
-Standardise recorded deck names, change to any common nicknames
+Standardise recorded deck names, using any given nicknames
 }

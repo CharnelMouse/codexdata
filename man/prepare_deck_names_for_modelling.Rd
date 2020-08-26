@@ -13,13 +13,14 @@ prepare_deck_names_for_modelling(
 \arguments{
 \item{name}{a character vector, containing deck names in standardised form, or their nicknames}
 
-\item{starters}{a data.table, containing columns for spec names and their associated starter colour}
+\item{starters}{a data.table, containing columns for spec names and their associated starter colour.}
 
 \item{nicknames}{an optional data.table, containing standardised deck names
-and their associated nicknames, so deck nicknames can be accepted as input}
+and their associated nicknames. This is used to convert given nicknames to
+their deck names.}
 }
 \value{
-a tibble, containing a column for the deck's starter name and three columns for its spec names.
+a data.table, containing a column for the deck's starter name and three columns for its spec names.
 }
 \description{
 Extract specs and starters from deck (nick)names for modelling
