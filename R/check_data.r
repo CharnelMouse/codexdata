@@ -1,5 +1,5 @@
 check_primary_keys_unique <- function(dt, colnames) {
-  if (length(colnames) == 0L)
+  if (length(colnames) == 0)
     stop("colnames cannot be length zero")
   if (any(!is.element(colnames, colnames(dt))))
     stop("colnames must exist in dt")
@@ -15,34 +15,34 @@ check_primary_keys_unique <- function(dt, colnames) {
 }
 
 check_foreign_keys <- function(dt, ref, keys, optional = FALSE) {
-  if (length(keys) == 0L)
+  if (length(keys) == 0)
     stop("require at least one key")
   dt_miss <- setdiff(keys, colnames(dt))
-  if (length(dt_miss) > 0L)
+  if (length(dt_miss) > 0)
     stop(paste("there are keys not in dt:", paste(dt_miss, collapse = ", ")))
   ref_miss <- setdiff(keys, colnames(ref))
-  if (length(ref_miss) > 0L)
+  if (length(ref_miss) > 0)
     stop(paste("there are keys not in ref:", paste(ref_miss, collapse = ", ")))
   value_miss <- stats::setNames(lapply(keys, function(key) setdiff(dt[[key]],
                                                                    c(ref[[key]],
                                                                      if (optional) NA))),
                                 keys)
-  value_miss <- value_miss[vapply(value_miss, length, integer(1L)) > 0L]
-  if (length(unlist(value_miss)) > 0L)
+  value_miss <- value_miss[vapply(value_miss, length, integer(1)) > 0L]
+  if (length(unlist(value_miss)) > 0)
     stop(paste0("there are values not in ref:\n",
                 paste(names(value_miss),
-                      vapply(value_miss, paste, character(1L), collapse = ", "),
+                      vapply(value_miss, paste, character(1), collapse = ", "),
                       sep = ": ",
                       collapse = "\n")))
 }
 
-check_no_required_values_missing <- function(dt, optional = character(0L)) {
+check_no_required_values_missing <- function(dt, optional = character()) {
   missing <- lapply(dt[, -..optional], function(x) which(is.na(x)))
-  stripped_missing <- missing[vapply(missing, length, integer(1L)) > 0L]
-  if (length((stripped_missing)) > 0L)
+  stripped_missing <- missing[vapply(missing, length, integer(1)) > 0L]
+  if (length((stripped_missing)) > 0)
     stop(paste0("there are missing required values in the following rows:\n",
                 paste(names(stripped_missing),
-                      vapply(stripped_missing, paste, character(1L), collapse = ", "),
+                      vapply(stripped_missing, paste, character(1), collapse = ", "),
                       sep = ": ",
                       collapse = "\n")))
 }
