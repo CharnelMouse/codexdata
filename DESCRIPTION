@@ -1,7 +1,7 @@
 Package: codexdata
 Type: Package
 Title: Data for Codex tournament matches
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: 
     person(given = "Mark",
            family = "Webster",
