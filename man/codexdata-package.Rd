@@ -8,6 +8,14 @@
 \description{
 Match data for tournament mathces of Codex by Sirlin Games.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/CharnelMouse/codexdata}
+  \item Report bugs at \url{https://github.com/CharnelMouse/codexdata/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Mark Webster \email{markwebster204@yahoo.co.uk}
 

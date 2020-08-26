@@ -7,7 +7,7 @@
 prepare_deck_names_for_modelling(
   name,
   starters,
-  nicknames = data.table(name = character(0), nickname = character(0))
+  nicknames = data.table(name = character(), nickname = character())
 )
 }
 \arguments{

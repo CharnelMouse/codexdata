@@ -7,7 +7,6 @@ Authors@R:
            family = "Webster",
            role = c("aut", "cre"),
            email = "markwebster204@yahoo.co.uk")
-Maintainer: Mark Webster <markwebster204@yahoo.co.uk>
 Description: Match data for tournament mathces of Codex by Sirlin Games.
 License: MIT + file LICENSE
 Encoding: UTF-8

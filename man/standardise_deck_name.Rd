@@ -5,14 +5,14 @@
 \title{Standardise recorded deck names, using any given nicknames}
 \usage{
 standardise_deck_name(
-  name,
+  names,
   starters = starters,
-  nicknames = data.table(name = character(0), nickname = character(0)),
+  nicknames = data.table(name = character(), nickname = character()),
   return_nicknames = TRUE
 )
 }
 \arguments{
-\item{name}{a character vector, containing deck names or nicknames.}
+\item{names}{a character vector, containing deck names or nicknames.}
 
 \item{starters}{a data.table, containing columns for spec names and their associated starter colour.}
 
