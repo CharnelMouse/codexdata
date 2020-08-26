@@ -21,3 +21,5 @@ Imports:
     data.table (>= 1.12.6),
     magrittr (>= 1.5),
     stringr (>= 1.4.0)
+URL: https://github.com/CharnelMouse/codexdata
+BugReports: https://github.com/CharnelMouse/codexdata/issues
