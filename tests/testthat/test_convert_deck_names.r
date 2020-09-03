@@ -15,6 +15,8 @@ describe("standardise_deck_name()", {
   })
   it("returns NAs", {
     expect_identical(std(c(NA_character_, "Anarchy/Blood/Growth")), c(NA_character_, "[Anarchy/Blood]/Growth"))
+    expect_identical(std(c(NA_character_, "[Anarchy/Blood]/Growth")),
+                     c(NA_character_, "[Anarchy/Blood]/Growth"))
   })
   it("returns a vector of the same length", {
     expect_length(std("Anarchy/Blood/Growth"), 1)

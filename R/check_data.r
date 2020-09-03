@@ -82,13 +82,16 @@ check_player_stats_agree <- function(match_stats, decks, include_nas = TRUE) {
   agreements[is.na(wins_match) | !wins_match | is.na(losses_match) | !losses_match]
 }
 
-check_player_sticks_to_tournament_deck <- function(matches, decks) {
+check_player_sticks_to_tournament_deck <- function(matches, decks, entry_rules) {
   if (any(is.na(decks$deck)))
     stop("there are missing decks")
-  expected <- decks[, c("tournament", "player", "deck")]
-  used_decks <- matches[, .(tournament, round,
-                            player = c(player1, player2),
-                            deck = c(deck1, deck2))
-                        ][expected, on = c("tournament", "player", "deck")]
+  fixed_deck_tournaments <- entry_rules[, .(fixed = all(fixed_deck == "yes")), by = "tournament"
+                                        ][fixed == TRUE, tournament]
+  expected <- decks[is.element(tournament, fixed_deck_tournaments),
+                    c("tournament", "player", "deck")]
+  used_decks <- matches[is.element(tournament, fixed_deck_tournaments),
+                        .(tournament, round,
+                          player = c(player1, player2),
+                          deck = c(deck1, deck2))]
   used_decks[!expected, on = c("tournament", "player", "deck")]
 }

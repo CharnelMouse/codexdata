@@ -91,7 +91,7 @@ standardised_nicknames <- nicknames[, .(nickname,
                                                                      specs))]
 if (nrow(check_player_stats_agree(get_player_win_stats(matches), entries, include_nas = FALSE)) > 0L)
   stop("Player stats do not agree")
-if (nrow(check_player_sticks_to_tournament_deck(matches, decks)) > 0L)
+if (nrow(check_player_sticks_to_tournament_deck(matches, decks, entry_rules)) > 0L)
   stop("Player deck changes within a fixed-deck tournament")
 if (any(!is.na(matches$deck1) & matches$deck1 != standardise_deck_name(matches$deck1, specs, standardised_nicknames)) ||
     any(!is.na(matches$deck2) & matches$deck2 != standardise_deck_name(matches$deck2, specs, standardised_nicknames)))
@@ -206,7 +206,9 @@ metalize_decks <- unique(metalize_matches[,
 check_primary_keys_unique(metalize_matches[tournament != "Casual"], names(metalize_matches))
 if (any(metalize_matches[, !is.na(victor) & !is.element(victor, c(player1, player2))]))
   stop("there are victors that don't match a player name")
-if (nrow(check_player_sticks_to_tournament_deck(metalize_matches, metalize_decks)) > 0L)
+dummy_metalize_entry_rules <- metalize_matches[, .(tournament = setdiff(unique(tournament), "Casual"),
+                                                   fixed_deck = "yes")]
+if (nrow(check_player_sticks_to_tournament_deck(metalize_matches, metalize_decks, dummy_metalize_entry_rules)) > 0L)
   stop("Player deck changes within a fixed-deck tournament")
 if (any(!is.na(metalize_matches$deck1) &
         metalize_matches$deck1 != standardise_deck_name(metalize_matches$deck1, specs, nicknames)) ||

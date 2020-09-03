@@ -55,7 +55,9 @@ check_bracket_placement <- function(name) {
   brackets_present <- stringr::str_detect(name, "\\[[\\w/]*\\]")
   if (any(brackets_present[!is.na(brackets_present)])) {
     invalid_brackets <- brackets_present & !stringr::str_detect(name, "^\\[[\\w/]+\\](/|$)")
-    stop_if_nonempty(name[invalid_brackets], "names with incorrect bracket placement", which(invalid_brackets))
+    stop_if_nonempty(name[invalid_brackets[!is.na(brackets_present)]],
+                     "names with incorrect bracket placement",
+                     which(invalid_brackets))
   }
 }
 

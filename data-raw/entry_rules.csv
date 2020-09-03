@@ -11,7 +11,7 @@ CAWS19,,yes,multicolour,1,1,yes
 LDT1,,yes,multicolour,1,1,yes
 LDT2,,yes,multicolour,1,1,yes
 LLL2,,no,multicolour,0,0,no
-MMM1,,yes,monocolour,1,1,yes
+MMM1,,no,monocolour,1,1,yes
 RACE2,,yes,multicolour,1,2,yes
 RACE3,dragon,yes,multicolour,1,,yes
 RACE3,hare,yes,multicolour,1,,yes
