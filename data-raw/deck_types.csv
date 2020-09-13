@@ -1,0 +1,5 @@
+deck_type,description
+monocolour,"one colour only, official starters and specs"
+multicolour,"mixed-colour decks allowed, official starters and specs"
+draft,"mixed-colour decks allowed with no spec belonging to starter, official starters and specs"
+multicolour_plus,"mixed-colour decks allowed, unofficial starters and specs allowed"

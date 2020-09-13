@@ -1,8 +1,8 @@
-starter,colour
-Black,#000000
-Blue,#162899
-Green,#207d26
-Neutral,#a39387
-Purple,#5a177e
-Red,#8c201b
-White,#f8f8f8
+starter,base,colour
+Black,yes,#000000
+Blue,yes,#162899
+Green,yes,#207d26
+Neutral,yes,#a39387
+Purple,yes,#5a177e
+Red,yes,#8c201b
+White,yes,#f8f8f8
