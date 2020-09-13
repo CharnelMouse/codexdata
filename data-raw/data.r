@@ -111,7 +111,7 @@ nicknames <- standardised_nicknames
 starters <- specs
 usethis::use_data(nicknames, starters, entries, overwrite = TRUE)
 
-monocolour_deck_names <- paste0("Mono", setdiff(starters$starter, "Neutral"))
+monocolour_deck_names <- paste0("Mono", starters[base == "yes", setdiff(starter, "Neutral")])
 monocolour_deck_components <- prepare_deck_names_for_modelling(monocolour_deck_names, specs, nicknames)
 possible_spec_trios <- utils::combn(specs$spec, 3L, paste, collapse = "/")
 draft_decks <-  standardise_deck_name(apply(expand.grid(possible_spec_trios, unique(specs$starter)),
