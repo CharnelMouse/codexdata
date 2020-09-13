@@ -191,7 +191,7 @@ Map(function(x, y) metalize_matches[victor == x, victor := y],
     c("IvanD", "BorisB", "Rita"),
     c("IvanP", "Boris", "RitaP"))
 metalize_matches[stringr::str_detect(tournament, "Monocolour") & is.na(round), round := 3L]
-metalize_matches[, deck1 := standardise_deck_name(deck1, codex::starters, codex::nicknames)]
+metalize_matches[, deck1 := standardise_deck_name(deck1, starters, nicknames)]
 if (metalize_matches[tournament != "Casual" & !is.element(victor, c(player1, player2)), .N] > 0L)
   stop("Invalid victors")
 
