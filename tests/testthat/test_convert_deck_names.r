@@ -89,23 +89,23 @@ describe("standardise_deck_name()", {
   })
 })
 
-describe("prepare_deck_names_for_modelling()", {
+describe("components()", {
   test_lookup <- data.table(spec = c("Anarchy", "Blood", "Fire", "Balance", "Feral", "Growth"),
                             starter = rep(c("Red", "Green"), each = 3))
   test_nicknames <- data.table(name = "[Anarchy/Blood/Fire]", nickname = "MonoRed")
   it("returns a nx0 data.table if given a length-0 vector of names", {
-    expect_identical(prepare_deck_names_for_modelling(character(0), test_lookup),
+    expect_identical(components(character(0), test_lookup),
                      data.table(starter = character(0), spec1 = character(0),
                                 spec2 = character(0), spec3 = character(0)))
   })
   it("returns a nx4 data.table for names, giving starter and specs for each deck", {
-    expect_identical(prepare_deck_names_for_modelling("[Anarchy/Blood/Fire]", test_lookup),
+    expect_identical(components("[Anarchy/Blood/Fire]", test_lookup),
                      data.table(starter = "Red", spec1 = "Anarchy", spec2 = "Blood", spec3 = "Fire"))
-    expect_identical(prepare_deck_names_for_modelling("Anarchy/Blood/Fire/Green", test_lookup),
+    expect_identical(components("Anarchy/Blood/Fire/Green", test_lookup),
                      data.table(starter = "Green", spec1 = "Anarchy", spec2 = "Blood", spec3 = "Fire"))
   })
   it("treats any nicknames as their respective deck names", {
-    expect_identical(prepare_deck_names_for_modelling("MonoRed", test_lookup, test_nicknames),
+    expect_identical(components("MonoRed", test_lookup, test_nicknames),
                      data.table(starter = "Red", spec1 = "Anarchy", spec2 = "Blood", spec3 = "Fire"))
   })
 })

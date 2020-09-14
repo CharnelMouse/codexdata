@@ -128,16 +128,16 @@ replace_with_nickname <- function(cleaned_names, nicknames) {
   ifelse(is.na(matches), cleaned_names, nicknames$nickname[matches])
 }
 
-#' Extract specs and starters from deck (nick)names for modelling
+#' Extract specs and starters from deck (nick)names
 #'
 #' @param name a character vector, containing deck names in standardised form, or their nicknames
 #' @inheritParams standardise_deck_name
 #'
 #' @return a data.table, containing a column for the deck's starter name and three columns for its spec names.
 #' @export
-prepare_deck_names_for_modelling <- function(name, starters,
-                                             nicknames = data.table(name = character(),
-                                                                    nickname = character())) {
+components <- function(name, starters,
+                       nicknames = data.table(name = character(),
+                                              nickname = character())) {
   if (length(name) == 0)
     return(data.table(starter = character(),
                       spec1 = character(),

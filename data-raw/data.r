@@ -112,7 +112,7 @@ starters <- specs
 usethis::use_data(nicknames, starters, entries, overwrite = TRUE)
 
 monocolour_deck_names <- paste0("Mono", starters[base == "yes", setdiff(starter, "Neutral")])
-monocolour_deck_components <- prepare_deck_names_for_modelling(monocolour_deck_names, specs, nicknames)
+monocolour_deck_components <- components(monocolour_deck_names, specs, nicknames)
 possible_spec_trios <- utils::combn(specs$spec, 3L, paste, collapse = "/")
 draft_decks <-  standardise_deck_name(apply(expand.grid(possible_spec_trios, unique(specs$starter)),
                                             1, paste, collapse = "/"),
@@ -121,8 +121,8 @@ multicolour_decks <- draft_decks[stringr::str_count(draft_decks, "/") == 2L]
 draft_deck_names <- standardise_deck_name(draft_decks, specs, nicknames)
 multicolour_deck_names <- standardise_deck_name(multicolour_decks, specs, nicknames)
 
-draft_deck_components <- prepare_deck_names_for_modelling(draft_deck_names, specs, nicknames)
-multicolour_deck_components <- prepare_deck_names_for_modelling(multicolour_deck_names, specs, nicknames)
+draft_deck_components <- components(draft_deck_names, specs, nicknames)
+multicolour_deck_components <- components(multicolour_deck_names, specs, nicknames)
 usethis::use_data(monocolour_deck_names, monocolour_deck_components,
                   multicolour_deck_names, multicolour_deck_components,
                   draft_deck_names, draft_deck_components,
