@@ -24,8 +24,7 @@ standardise_deck_name <- function(names, starters = starters,
   check_for_late_brackets(base_names)
   check_bracket_placement(base_names)
   components <- remove_brackets(base_names) %>%
-    strsplit("/") %>%
-    lapply(stringr::str_to_title)
+    strsplit("/")
   check_all_deck_components_valid(components, starters)
   cleaned <- lapply(components, remove_starters_if_matched, starters) %>%
     add_deck_delimiters(starters)

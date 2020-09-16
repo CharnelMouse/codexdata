@@ -1,8 +1,8 @@
 context("deck name conversion")
 
 describe("standardise_deck_name()", {
-  test_lookup <- data.table(spec = c("Anarchy", "Blood", "Fire", "Balance", "Feral", "Growth"),
-                            starter = rep(c("Red", "Green"), each = 3))
+  test_lookup <- data.table(spec = c("Anarchy", "AnarchyF20", "Blood", "Fire", "Balance", "Feral", "Growth"),
+                            starter = rep(c("Red", "Green"), c(4, 3)))
   std <- function(x, ...) {
     standardise_deck_name(x, test_lookup, ...)
   }
@@ -84,8 +84,8 @@ describe("standardise_deck_name()", {
                          return_nicknames = FALSE),
                      c("[Anarchy/Blood/Fire]", "[Anarchy/Blood]/Growth"))
   })
-  it("can take specs with incorrect capitalisation", {
-    expect_identical(std("anarcHy/BlOod/fire/GrEen"), "Anarchy/Blood/Fire/Green")
+  it("can take specs with capital letters in the middle of their name", {
+    expect_identical(std("AnarchyF20/Blood/Fire/Green"), "AnarchyF20/Blood/Fire/Green")
   })
 })
 
