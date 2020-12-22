@@ -67,7 +67,7 @@ get_player_win_stats <- function(matches) {
         all = TRUE)[, won := ifelse(is.na(won), 0L, won)
                     ][, c("lost", "byes") := list(played - won,
                                                   last_round - played)
-                      ][order(tournament, -won, lost)
+                      ][order(tournament, -won, lost, -byes)
                         ][, c("tournament", "player", "last_round", "played", "won", "lost", "byes")]
 }
 
