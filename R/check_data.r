@@ -14,26 +14,50 @@ check_primary_keys_unique <- function(dt, colnames) {
   }
 }
 
-check_foreign_keys <- function(dt, ref, keys, optional = FALSE) {
+check_foreign_keys <- function(
+  dt,
+  ref,
+  keys,
+  ref_keys = keys,
+  optional = FALSE
+) {
   if (length(keys) == 0)
     stop("require at least one key")
+  if (length(keys) != length(ref_keys))
+    stop("keys and ref_keys must be same length")
   dt_miss <- setdiff(keys, colnames(dt))
   if (length(dt_miss) > 0)
     stop(paste("there are keys not in dt:", paste(dt_miss, collapse = ", ")))
-  ref_miss <- setdiff(keys, colnames(ref))
+  ref_miss <- setdiff(ref_keys, colnames(ref))
   if (length(ref_miss) > 0)
     stop(paste("there are keys not in ref:", paste(ref_miss, collapse = ", ")))
-  value_miss <- stats::setNames(lapply(keys, function(key) setdiff(dt[[key]],
-                                                                   c(ref[[key]],
-                                                                     if (optional) NA))),
-                                keys)
+  value_miss <- stats::setNames(
+    Map(
+      function(key, ref_key) {
+        setdiff(
+          dt[[key]],
+          c(
+            ref[[ref_key]],
+            if (optional) NA
+          )
+        )
+      },
+      keys,
+      ref_keys
+    ),
+    keys
+  )
   value_miss <- value_miss[vapply(value_miss, length, integer(1)) > 0L]
   if (length(unlist(value_miss)) > 0)
-    stop(paste0("there are values not in ref:\n",
-                paste(names(value_miss),
-                      vapply(value_miss, paste, character(1), collapse = ", "),
-                      sep = ": ",
-                      collapse = "\n")))
+    stop(paste0(
+      "there are values not in ref:\n",
+      paste(
+        names(value_miss),
+        vapply(value_miss, paste, character(1), collapse = ", "),
+        sep = ": ",
+        collapse = "\n"
+      )
+    ))
 }
 
 check_no_required_values_missing <- function(dt, optional = character()) {
