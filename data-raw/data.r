@@ -50,12 +50,18 @@ check_foreign_keys(matches, maps, "map", optional = TRUE)
 check_foreign_keys(matches[, .(player = c(player1, player2))], players, "player")
 check_foreign_keys(matches[, .(player = victor)], players, "player", optional = TRUE)
 check_foreign_keys(matches, tournaments, "tournament")
-check_no_required_values_missing(matches,
-                                 c("end", "deck1", "deck2", "map", "victor", "victory", "unknown_order", "notes"))
+check_no_required_values_missing(
+  matches[!is.na(victor)],
+  c("end", "deck1", "deck2", "map", "victor", "victory", "unknown_order", "notes")
+)
+check_no_required_values_missing(
+  matches[is.na(victor)],
+  c("start", "end", "deck1", "deck2", "map", "victor", "victory", "format", "unknown_order", "notes")
+)
 stopifnot(all(matches$end >= matches$start, na.rm = TRUE))
 stopifnot(all(matches[, is.na(victor) | victor == player1 | victor == player2]))
 stopifnot(all(is.element(matches$victory, c("normal", "timeout", "forfeit", NA_character_))))
-stopifnot(all(is.element(matches$format, c("forum", "tabletopia", "face-to-face"))))
+stopifnot(all(is.element(matches$format, c("forum", "tabletopia", "face-to-face", NA_character_))))
 stopifnot(all(is.element(matches$unknown_order, c("TRUE", NA_character_))))
 
 decks <- fread("data-raw/decks.csv")
