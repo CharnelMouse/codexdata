@@ -909,8 +909,14 @@ start,end,tournament,round,round_match_number,player1,player2,deck1,deck2,map,vi
 2020-11-10,2020-11-11,XCAFS20,6,2,dwarddd,FrozenStorm,MonoPurpleF20,[BashingF20]/DisciplineF20/NinjitsuF20,,dwarddd,normal,forum,,charnel_mouse,
 2020-11-09,2020-11-11,XCAFS20,6,3,Nekoatl,bansa,[GrowthF20]/StrengthF20/TruthF20,[LawF20/PeaceF20]/FinesseF20,,bansa,normal,forum,,charnel_mouse,
 2020-11-09,2020-11-13,XCAFS20,6,1,EricF,zhavier,[PastF20]/PeaceF20/TruthF20,[BalanceF20/FeralF20]/BloodF20,,EricF,normal,forum,,charnel_mouse,
-2020-11-13,2020-11-14,XCAFS20,7,1,bansa,EricF,[LawF20/PeaceF20]/FinesseF20,[PastF20]/PeaceF20/TruthF20,,EricF,normal,forum,,charnel_mouse,"bansa resigned early, arguably a timeout"
+2020-11-13,2020-11-14,XCAFS20,7,1,bansa,EricF,[LawF20/PeaceF20]/FinesseF20,[PastF20]/PeaceF20/TruthF20,,EricF,forfeit,forum,,charnel_mouse,"bansa resigned early, arguably a timeout"
 2020-11-13,2020-11-22,XCAFS20,7,2,zhavier,charnel_mouse,[BalanceF20/FeralF20]/BloodF20,[BalanceF20]/BloodF20/StrengthF20,,charnel_mouse,normal,forum,,charnel_mouse,
 2020-11-23,2020-11-30,XCAFS20,8,1,dwarddd,bansa,MonoPurpleF20,[LawF20/PeaceF20]/FinesseF20,,bansa,normal,forum,,charnel_mouse,
 2020-11-23,2020-12-03,XCAFS20,8,2,EricF,charnel_mouse,[PastF20]/PeaceF20/TruthF20,[BalanceF20]/BloodF20/StrengthF20,,EricF,normal,forum,,charnel_mouse,
 2020-12-04,2020-12-11,XCAFS20,9,1,EricF,bansa,[PastF20]/PeaceF20/TruthF20,[LawF20/PeaceF20]/FinesseF20,,bansa,normal,forum,,charnel_mouse,
+2021-01-05,2021-01-08,CAWS20,1,1,Bomber678,Steve44,[Finesse]/Anarchy/Strength,[Disease/Necromancy]/Discipline,,Bomber678,normal,forum,,charnel_mouse,
+2021-01-04,2021-01-12,CAWS20,1,2,bansa,Nopethebard,[Finesse]/Blood/Fire,MonoRed,,bansa,normal,forum,,charnel_mouse,
+2021-01-04,2021-01-09,CAWS20,1,3,Unity,CarpeGuitarrem,[Future/Present]/Peace,MonoRed,,Unity,normal,forum,,charnel_mouse,
+2021-01-04,2021-01-06,CAWS20,1,4,Nekoatl,zhavier,[Demonology/Disease]/Truth,[Blood]/Feral/Strength,,zhavier,normal,forum,,charnel_mouse,
+2021-01-04,2021-01-06,CAWS20,1,5,FrozenStorm,hardy83,Nightmare,[Discipline]/Anarchy/Finesse,,FrozenStorm,normal,forum,,charnel_mouse,
+2021-01-04,,CAWS20,1,6,charnel_mouse,EricF,[Demonology/Disease]/Discipline,[Demonology/Necromancy]/Bashing,,,,forum,,charnel_mouse,
