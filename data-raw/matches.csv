@@ -940,4 +940,6 @@ start,end,tournament,round,round_match_number,player1,player2,deck1,deck2,map,vi
 2021-02-03,2021-02-08,CAWS20,5,3,zhavier,charnel_mouse,[Blood]/Feral/Strength,[Demonology/Disease]/Discipline,,zhavier,normal,forum,,charnel_mouse,
 2021-02-03,2021-02-05,CAWS20,5,4,CarpeGuitarrem,hardy83,MonoRed,[Discipline]/Anarchy/Finesse,,CarpeGuitarrem,normal,forum,,charnel_mouse,
 2021-02-08,2021-02-10,CAWS20,6,1,bansa,Bomber678,[Finesse]/Blood/Fire,[Finesse]/Anarchy/Strength,,bansa,normal,forum,,charnel_mouse,
-2021-02-08,,CAWS20,6,2,zhavier,CarpeGuitarrem,[Blood]/Feral/Strength,MonoRed,,,,forum,,charnel_mouse,
+2021-02-08,2021-02-12,CAWS20,6,2,zhavier,CarpeGuitarrem,[Blood]/Feral/Strength,MonoRed,,zhavier,normal,forum,,charnel_mouse,
+2021-02-13,2021-02-17,CAWS20,7,1,Bomber678,zhavier,[Finesse]/Anarchy/Strength,[Blood]/Feral/Strength,,Bomber678,normal,forum,,charnel_mouse,
+2021-02-12,2021-02-17,CAWS20,7,2,FrozenStorm,bansa,Nightmare,[Finesse]/Blood/Fire,,bansa,normal,forum,,charnel_mouse,
