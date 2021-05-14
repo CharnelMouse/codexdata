@@ -20,3 +20,4 @@ XCAFS18,tournament,"Standard tournament with banlist: Growth+Strength, Purple+Pe
 XCAFS20,tournament,Tournament with community changelist for cards
 XCAPS19,tournament,"P2 starter + spec, P1 starter + 2 specs, P2 2 specs, P1 1 spec. Full draft decks allowed to stop colour blocking"
 XCAPS20,tournament,Map tournament
+XCAPS21,tournament,"Midori's Balanced Bouts (model chooses deck for a fair matchup, not accounting for players involved)"
