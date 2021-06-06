@@ -122,7 +122,7 @@ start,end,tournament,round,round_match_number,player1,player2,deck1,deck2,map,vi
 2016-11-16,2016-11-17,RACE3,3,28,zhavier,Jadiel,MonoBlack,MonoPurple,,Jadiel,normal,forum,,charnel_mouse,
 2016-11-16,2016-11-17,RACE3,4,3,cstick,Castanietzsche,[Demonology]/Balance/Fire,MonoBlue,,Castanietzsche,normal,forum,,charnel_mouse,
 2016-11-16,2016-11-17,RACE3,4,5,Bomber678,Request,[Feral]/Strength/Truth,MonoPurple,,Bomber678,normal,forum,,charnel_mouse,
-2016-11-16,2016-11-18,CAFS16,8,2,cstick,Zejety,[Demonology]/Anarchy/Law,[Finesse]/Discipline/Strength,,Zejety,normal,forum,,charnel_mouse,
+2016-11-16,2016-11-18,CAFS16,8,2,cstick,Zejety,[Demonology]/Anarchy/Law,[Finesse]/Discipline/Strength,,cstick,normal,forum,,charnel_mouse,
 2016-11-03,2016-11-18,RACE3,1,8,EricF,Marto,[Demonology/Necromancy]/Bashing,MonoBlue,,EricF,normal,forum,,charnel_mouse,
 2016-11-15,2016-11-18,RACE3,3,11,Marto,cstick,MonoBlue,[Demonology]/Balance/Fire,,cstick,normal,forum,,charnel_mouse,
 2016-11-14,2016-11-18,RACE3,3,13,Legion,Jake,Nightmare,MonoWhite,,Legion,normal,forum,,charnel_mouse,
@@ -415,7 +415,7 @@ start,end,tournament,round,round_match_number,player1,player2,deck1,deck2,map,vi
 2017-12-19,2017-12-19,LDT2,2,1,RathyAro,zhavier,[Finesse]/Peace/Truth,Miracle Grow,,zhavier,normal,forum,,charnel_mouse,[Finesse]/Peach/Truth
 2017-12-19,2017-12-19,LDT2,2,4,Legion,sKiTTer,Nightmare,[Demonology]/Future/Law,,Legion,forfeit,forum,,charnel_mouse,"LTD2; sKiTTer resigned on turn 1 rather than play against Nightmare, so I don't feel comfortable marking this as a normal win and having it count in the model. FrozenStorm plays it out instead, and loses, but I haven't counted that here."
 2017-12-18,2017-12-20,MMM1,10,10,Nekoatl,FrozenStorm,MonoBlue,MonoBlack,,FrozenStorm,normal,forum,,charnel_mouse,
-2017-12-19,2017-12-21,LDT2,2,2,ARMed_PIrate,FrozenStorm,[Discipline/Ninjitsu]/Bashing,[Future]/Necromancy/Peace,,ARMed_PIrate,normal,forum,,charnel_mouse,
+2017-12-19,2017-12-21,LDT2,2,2,ARMed_PIrate,FrozenStorm,[Discipline/Ninjitsu]/Bashing,[Future]/Necromancy/Peace,,FrozenStorm,normal,forum,,charnel_mouse,
 2017-12-20,2017-12-21,LDT2,2,5,Hobusu,Bob199,Miracle Grow,[Feral]/Blood/Truth,,Hobusu,normal,forum,,charnel_mouse,
 2017-12-19,2017-12-23,LDT2,2,3,holytispon,Dreamfire,[Necromancy]/Fire/Present,[Blood]/Feral/Present,,Dreamfire,normal,forum,,charnel_mouse,
 2017-12-18,2017-12-24,MMM1,2,12,Dreamfire,holytispon,MonoBlue,MonoPurple,,holytispon,normal,forum,,charnel_mouse,
