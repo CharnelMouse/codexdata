@@ -103,13 +103,25 @@ if (nrow(check_player_stats_agree(get_player_win_stats(matches), entries, includ
   stop("Player stats do not agree")
 if (nrow(check_player_sticks_to_tournament_deck(matches, decks, entry_rules)) > 0L)
   stop("Player deck changes within a fixed-deck tournament")
-if (any(!is.na(matches$deck1) & matches$deck1 != standardise_deck_name(matches$deck1, specs, standardised_nicknames)) ||
-    any(!is.na(matches$deck2) & matches$deck2 != standardise_deck_name(matches$deck2, specs, standardised_nicknames)))
+if (
+  any(
+    !is.na(matches$deck1) &
+    matches$deck1 != standardise_deck_name(matches$deck1, specs, standardised_nicknames) &
+    matches$deck1 != standardise_deck_name(matches$deck1, specs, standardised_nicknames, return_nicknames = FALSE)
+  ) ||
+  any(
+    !is.na(matches$deck2) &
+    matches$deck2 != standardise_deck_name(matches$deck2, specs, standardised_nicknames) &
+    matches$deck2 != standardise_deck_name(matches$deck2, specs, standardised_nicknames, return_nicknames = FALSE)
+  )
+)
   stop("there are non-standardised names in matches")
 matches[, c("deck1", "deck2") := Map(standardise_deck_name, list(deck1, deck2),
                                      MoreArgs = list(starters = specs, nicknames = standardised_nicknames))]
+decks[, deck := standardise_deck_name(deck, starters = specs, nicknames = standardised_nicknames)]
 check_primary_keys_unique(matches, c("end", "tournament", "round", "round_match_number"))
 fwrite(matches, "data-raw/matches.csv")
+fwrite(decks, "data-raw/decks.csv")
 if (any(!is.na(decks$deck) & decks$deck != standardise_deck_name(decks$deck, specs, standardised_nicknames)))
   stop("there are non-standardised names in decks")
 

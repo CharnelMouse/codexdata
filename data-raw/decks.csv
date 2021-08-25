@@ -51,7 +51,7 @@ CAMS19,FrozenStorm,1,[Future/Past]/Finesse
 CAMS19,zhavier,1,Miracle Grow
 CAMS19,Bomber678,1,[Finesse]/Peace/Truth
 CAMS19,charnel_mouse,1,[Balance]/Blood/Strength
-CAMS19,Nopethebard,1,[Discipline/Strength]/Finesse
+CAMS19,Nopethebard,1,Daymare
 CAMS19,EricF,1,[Anarchy/Blood]/Demonology
 CAMS19,Persephone,1,MonoGreen
 CAMS19,Nekoatl,1,[Necromancy]/Blood/Growth
@@ -67,7 +67,7 @@ CAMS20,zhavier,1,[Future]/Necromancy/Peace
 CAMS20,FrozenStorm,1,[Necromancy]/Blood/Fire
 CAMS20,charnel_mouse,1,[Necromancy]/Anarchy/Blood
 CAMS20,codexnewb,1,Miracle Grow
-CAMS20,Bomber678,1,[Discipline/Strength]/Finesse
+CAMS20,Bomber678,1,Daymare
 CAMS20,Nopethebard,1,MonoWhite
 CAMS20,CarpeGuitarrem,1,MonoRed
 CAMS20,Nekoatl,1,[Future/Past]/Peace
@@ -114,7 +114,7 @@ CAWS16,mdn1111,1,[Feral]/Strength/Truth
 CAWS16,ARMed_PIrate,1,[Blood]/Demonology/Strength
 CAWS16,EricF,1,PPA
 CAWS16,Eijolend,1,MonoGreen
-CAWS16,Zejety,1,[Discipline/Strength]/Finesse
+CAWS16,Zejety,1,Daymare
 CAWS16,Mooseknuckles,1,[Growth]/Necromancy/Strength
 CAWS16,neigutten,1,[Disease]/Law/Truth
 CAWS16,Alhazard,1,Nightmare
@@ -123,7 +123,7 @@ CAWS16,PiHalbe,1,MonoBlack
 CAWS18,zhavier,1,[Finesse]/Anarchy/Blood
 CAWS18,FrozenStorm,1,SkeleGrow
 CAWS18,charnel_mouse,1,[Balance]/Blood/Strength
-CAWS18,EricF,1,[Discipline/Strength]/Finesse
+CAWS18,EricF,1,Daymare
 CAWS18,Bob199,1,MonoPurple
 CAWS18,Dreamfire,1,[Strength]/Blood/Future
 CAWS18,tie,1,MonoPurple
@@ -133,7 +133,7 @@ CAWS18,witspur,1,[Disease]/Anarchy/Blood
 CAWS18,thehug0naut,1,[Feral]/Blood/Present
 CAWS18,Bomber678,1,[Balance]/Law/Peace
 CAWS18,flagrantangles,1,[Bashing]/Fire/Peace
-CAWS18,Marto,1,[Discipline/Strength]/Finesse
+CAWS18,Marto,1,Daymare
 CAWS18,Shadow_Night_Black,1,[Past/Present]/Finesse
 CAWS19,FrozenStorm,1,[Future]/Necromancy/Peace
 CAWS19,charnel_mouse,1,[Balance]/Blood/Strength
@@ -217,7 +217,7 @@ RACE3,petE,1,Miracle Grow
 RACE3,Bob199,1,[Discipline]/Blood/Truth
 RACE3,Bob199,2,[Demonology]/Balance/Feral
 RACE3,Marto,1,MonoPurple
-RACE3,Marto,2,[Discipline/Strength]/Finesse
+RACE3,Marto,2,Daymare
 RACE3,Marto,3,MonoBlue
 RACE3,Marto,4,MonoRed
 RACE3,zhavier,1,MonoBlack
@@ -241,7 +241,7 @@ XCAFRR19,OffKilter,1,[Balance/Growth]/Disease
 XCAFRR19,CarpeGuitarrem,1,[Necromancy]/Blood/Present
 XCAFRR19,Persephone,1,[Peace]/Discipline/Disease
 XCAFRR19,Taz,1,[Discipline]/Past/Peace
-XCAFRR19,zhavier,1,[Discipline/Strength]/Finesse
+XCAFRR19,zhavier,1,Daymare
 XCAFRR19,FrozenStorm,1,[Demonology/Disease/Necromancy]
 XCAFRR19,Nekoatl,1,[Demonology]/Growth/Strength
 XCAFRR19,Leaky,1,[Feral/Growth]/Disease
@@ -280,7 +280,7 @@ XCAPS20,Shadow_Night_Black,1,MonoPurple
 XCAPS20,Akiata,1,[Balance/Growth]/Finesse
 XCAPS20,EricF,1,[Blood]/Growth/Strength
 XCAPS20,bolyarich,1,[Demonology]/Anarchy/Balance
-XCAPS20,codexnewb,1,[Discipline/Strength]/Finesse
+XCAPS20,codexnewb,1,Daymare
 XCAPS20,dwarddd,1,MonoPurple
 XCAPS20,zhavier,1,MonoWhite
 XCAPS20,James,1,MonoBlack
