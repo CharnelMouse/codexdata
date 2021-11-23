@@ -135,7 +135,8 @@ replace_with_nickname <- function(cleaned_names, nicknames) {
 #' @return a data.table, containing a column for the deck's starter name and three columns for its spec names.
 #' @export
 components <- function(
-  name, starters,
+  name,
+  starters,
   nicknames = data.table(
     name = character(),
     nickname = character()
