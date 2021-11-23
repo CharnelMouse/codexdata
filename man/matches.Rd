@@ -4,7 +4,8 @@
 \name{matches}
 \alias{matches}
 \title{Recorded match}
-\format{A data.table:
+\format{
+A data.table:
 \describe{
   \item{start}{A Date, giving the day the match started.}
   \item{end}{A Date, giving the day the match finished.}
@@ -32,7 +33,8 @@
   recorded the match.}
   \item{notes}{A character, giving any notes on the match the recorder felt
   like giving.}
-}}
+}
+}
 \source{
 Original forum games on \url{http://forums.sirlingames.com/}. An
   online copy is kept at

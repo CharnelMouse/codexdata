@@ -4,7 +4,9 @@
 \name{nicknames}
 \alias{nicknames}
 \title{Common Codex deck nicknames}
-\format{An object of class \code{data.table} (inherits from \code{data.frame}) with 12 rows and 2 columns.}
+\format{
+An object of class \code{data.table} (inherits from \code{data.frame}) with 16 rows and 2 columns.
+}
 \usage{
 nicknames
 }

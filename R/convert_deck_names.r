@@ -134,27 +134,45 @@ replace_with_nickname <- function(cleaned_names, nicknames) {
 #'
 #' @return a data.table, containing a column for the deck's starter name and three columns for its spec names.
 #' @export
-components <- function(name, starters,
-                       nicknames = data.table(name = character(),
-                                              nickname = character())) {
+components <- function(
+  name, starters,
+  nicknames = data.table(
+    name = character(),
+    nickname = character()
+  )
+) {
   if (length(name) == 0)
-    return(data.table(starter = character(),
-                      spec1 = character(),
-                      spec2 = character(),
-                      spec3 = character()))
+    return(data.table(
+      starter = character(),
+      spec1 = character(),
+      spec2 = character(),
+      spec3 = character()
+    ))
   nickname_matches <- match(name, nicknames$nickname)
-  name <- ifelse(is.na(nickname_matches),
-                 name,
-                 nicknames$name[nickname_matches])
-  split <- stringr::str_split(remove_brackets(name), "/", n = 4, simplify = TRUE)
-  data.table(starter = ifelse(split[, 4] == "",
-                              starters$starter[match(split[, 1], starters$spec)],
-                              split[, 4]),
-             spec1 = split[, 1],
-             spec2 = split[, 2],
-             spec3 = split[, 3])
+  name <- ifelse(
+    is.na(nickname_matches),
+    name,
+    nicknames$name[nickname_matches]
+  )
+  split <- remove_brackets(name) |>
+    strsplit(split = "/", fixed = TRUE) |>
+    # Add missing starter names, so 4 components for each deck,
+    # and move starter to front
+    lapply(function(single_split) {
+      if (is.na(single_split[4]))
+        c(starters$starter[match(single_split[1], starters$spec)], single_split)
+      else
+        single_split[c(4, 1:3)]
+    }) |>
+    # strsplit returns a list of split strings, we want a matrix with 4 cols
+    Reduce(f = rbind) |>
+    # single deck would be rbinded to a vector, so force matrix
+    matrix(ncol = 4) |>
+    as.data.frame()
+  colnames(split) <- c("starter", "spec1", "spec2", "spec3")
+  as.data.table(split)
 }
 
 remove_brackets <- function(name) {
-  stringr::str_remove_all(name, "[\\[\\]]")
+  gsub("\\[|\\]", "", name)
 }

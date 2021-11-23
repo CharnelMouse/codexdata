@@ -4,7 +4,8 @@
 \name{decks}
 \alias{decks}
 \title{Tournament entract deck information for forum games}
-\format{A data.table:
+\format{
+A data.table:
 \describe{
   \item{tournament}{A character, giving the tournament name.}
   \item{entrant_number}{An integer, giving the order in which the entrant
@@ -14,7 +15,8 @@
   \item{win}{An integer, giving the number of games the player won.}
   \item{loss}{An integer, giving the number of games the player lost.}
   \item{bye}{An integer, giving the number of rounds in which the player was given a bye.}
-}}
+}
+}
 \source{
 Original forum games on \url{http://forums.sirlingames.com/}. An
   online copy is kept at

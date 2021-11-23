@@ -4,7 +4,9 @@
 \name{starters}
 \alias{starters}
 \title{Specification-starter lookup table}
-\format{An object of class \code{data.table} (inherits from \code{data.frame}) with 20 rows and 4 columns.}
+\format{
+An object of class \code{data.table} (inherits from \code{data.frame}) with 41 rows and 4 columns.
+}
 \usage{
 starters
 }
