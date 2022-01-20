@@ -99,9 +99,9 @@ stopifnot(nrow(fsetdiff(entries[, c("tournament", "entry_type")], entry_rules[, 
 standardised_nicknames <- nicknames[, .(nickname,
                                         name = standardise_deck_name(paste(spec1, spec2, spec3, starter, sep = "/"),
                                                                      specs))]
-decks$deck <- standardise_deck_name(decks$deck, specs, standardised_nicknames)
-matches$deck1 <- standardise_deck_name(matches$deck1, specs, standardised_nicknames)
-matches$deck2 <- standardise_deck_name(matches$deck2, specs, standardised_nicknames)
+decks$deck <- standardise_deck_name(decks$deck, specs, standardised_nicknames, FALSE)
+matches$deck1 <- standardise_deck_name(matches$deck1, specs, standardised_nicknames, FALSE)
+matches$deck2 <- standardise_deck_name(matches$deck2, specs, standardised_nicknames, FALSE)
 if (nrow(check_player_stats_agree(get_player_win_stats(matches), entries, include_nas = FALSE)) > 0L)
   stop("Player stats do not agree")
 if (nrow(check_player_sticks_to_tournament_deck(matches, decks, entry_rules)) > 0L)
@@ -120,12 +120,12 @@ if (
 )
   stop("there are non-standardised names in matches")
 matches[, c("deck1", "deck2") := Map(standardise_deck_name, list(deck1, deck2),
-                                     MoreArgs = list(starters = specs, nicknames = standardised_nicknames))]
-decks[, deck := standardise_deck_name(deck, starters = specs, nicknames = standardised_nicknames)]
+                                     MoreArgs = list(starters = specs, nicknames = standardised_nicknames, return_nicknames = FALSE))]
+decks[, deck := standardise_deck_name(deck, starters = specs, nicknames = standardised_nicknames, return_nicknames = FALSE)]
 check_primary_keys_unique(matches, c("end", "tournament", "round", "round_match_number"))
 fwrite(matches, "data-raw/matches.csv")
 fwrite(decks, "data-raw/decks.csv")
-if (any(!is.na(decks$deck) & decks$deck != standardise_deck_name(decks$deck, specs, standardised_nicknames)))
+if (any(!is.na(decks$deck) & decks$deck != standardise_deck_name(decks$deck, specs, standardised_nicknames, return_nicknames = FALSE)))
   stop("there are non-standardised names in decks")
 
 nicknames <- standardised_nicknames
@@ -222,10 +222,12 @@ metalize_matches <- merge(clean_tournaments,
                                                 player1, player2,
                                                 deck1 = standardise_deck_name(deck1,
                                                                               specs,
-                                                                              nicknames),
+                                                                              nicknames,
+                                                                              return_nicknames = FALSE),
                                                 deck2 = standardise_deck_name(deck2,
                                                                               specs,
-                                                                              nicknames),
+                                                                              nicknames,
+                                                                              return_nicknames = FALSE),
                                                 map = NA_character_,
                                                 victor,
                                                 victory = `victory type`, format,
@@ -236,7 +238,7 @@ Map(function(x, y) metalize_matches[victor == x, victor := y],
     c("IvanD", "BorisB", "Rita"),
     c("IvanP", "Boris", "RitaP"))
 metalize_matches[stringr::str_detect(tournament, "Monocolour") & is.na(round), round := 3L]
-metalize_matches[, deck1 := standardise_deck_name(deck1, starters, nicknames)]
+metalize_matches[, deck1 := standardise_deck_name(deck1, starters, nicknames, FALSE)]
 if (metalize_matches[tournament != "Casual" & !is.element(victor, c(player1, player2)), .N] > 0L)
   stop("Invalid victors")
 
@@ -256,9 +258,9 @@ dummy_metalize_entry_rules <- metalize_matches[, .(tournament = setdiff(unique(t
 if (nrow(check_player_sticks_to_tournament_deck(metalize_matches, metalize_decks, dummy_metalize_entry_rules)) > 0L)
   stop("Player deck changes within a fixed-deck tournament")
 if (any(!is.na(metalize_matches$deck1) &
-        metalize_matches$deck1 != standardise_deck_name(metalize_matches$deck1, specs, nicknames)) ||
+        metalize_matches$deck1 != standardise_deck_name(metalize_matches$deck1, specs, nicknames, FALSE)) ||
     any(!is.na(metalize_matches$deck2) &
-        metalize_matches$deck2 != standardise_deck_name(metalize_matches$deck2, specs, nicknames)))
+        metalize_matches$deck2 != standardise_deck_name(metalize_matches$deck2, specs, nicknames, FALSE)))
   stop("there are non-standardised names")
 
 check_primary_keys_unique(metalize_decks, c("tournament", "player", "deck_number"))
