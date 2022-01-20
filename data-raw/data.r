@@ -99,6 +99,9 @@ stopifnot(nrow(fsetdiff(entries[, c("tournament", "entry_type")], entry_rules[, 
 standardised_nicknames <- nicknames[, .(nickname,
                                         name = standardise_deck_name(paste(spec1, spec2, spec3, starter, sep = "/"),
                                                                      specs))]
+decks$deck <- standardise_deck_name(decks$deck, specs, standardised_nicknames)
+matches$deck1 <- standardise_deck_name(matches$deck1, specs, standardised_nicknames)
+matches$deck2 <- standardise_deck_name(matches$deck2, specs, standardised_nicknames)
 if (nrow(check_player_stats_agree(get_player_win_stats(matches), entries, include_nas = FALSE)) > 0L)
   stop("Player stats do not agree")
 if (nrow(check_player_sticks_to_tournament_deck(matches, decks, entry_rules)) > 0L)
