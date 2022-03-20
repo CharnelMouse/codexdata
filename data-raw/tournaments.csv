@@ -24,3 +24,4 @@ XCAPS19,tournament,"P2 starter + spec, P1 starter + 2 specs, P2 2 specs, P1 1 sp
 XCAPS20,tournament,Map tournament
 XCAPS21,tournament,"Midori's Balanced Bouts (model chooses deck for a fair matchup, not accounting for players involved)"
 XCAFRR21,tournament,"Mono Colour Six Shooter: everyone plays each monocolour deck once in a round robin (split into pods), then up to once each in single-elimination among qualifiers. Vandy is replaced by Troq, who's counted as Black for gold costs, but still with Demonology non-spell cards (""Black Bashing""). In advance, everyone can pick one non-Black spec to replace with Finesse. Matches all posted at once, in three suggested groupings and two matches per grouping for each player. Suggested two-week playtime per grouping."
+XCAPS22,tournament,Tournament with small balance proposals
